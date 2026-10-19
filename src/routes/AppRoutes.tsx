@@ -4,6 +4,7 @@ import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Home from "../pages/home/Home";
 import Eventos from "../pages/Eventos/Eventos";
 import DetalhesEvento from "../pages/DetalhesEvento/DetalhesEvento";
+import Login from "../pages/Login/Login";
 
 // O React Router não rola até o #id sozinho (ex.: /home#contato).
 function ScrollToHash() {
@@ -28,6 +29,7 @@ function AppRoutes() {
                 <Route path="/home" element={<Home />} />
                 <Route path="/eventos" element={<Eventos />} />
                 <Route path="/eventos/:id" element={<DetalhesEvento/>} />
+                <Route path="/login" element={<Login/>} />
 
                 <Route path="*" element={<Navigate to="/home" replace />} />
             </Routes>
